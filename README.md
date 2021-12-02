@@ -11,8 +11,8 @@ This webpage generates gallery from an api and it can be filtered.
 
 ### Links
 
-- Solution URL: []
-- Live Site URL: []
+- Solution URL: [https://github.com/PrincessMaggy/gallery.git]
+- Live Site URL: [https://princessmaggy.github.io/gallery/]
 
 ### Built with
 
