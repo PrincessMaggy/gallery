@@ -100,3 +100,10 @@ header h2 {
   font-weight: 700;
   transition: ease-in 0.2s;
 }
+
+@media screen and(max-width:768px) {
+  .gallery-img img {
+    width: 80vw;
+    height: 100%;
+  }
+}
