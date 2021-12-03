@@ -7,6 +7,7 @@ body {
   font-family: "Roboto Slab", serif;
 }
 
+/* header */
 header {
   display: flex;
   flex-direction: column;
@@ -21,12 +22,14 @@ header h2 {
   text-decoration: none;
   color: black;
 }
+
+/* form section */
 .search-form {
   padding: 2rem;
   display: flex;
 }
 .search-form input {
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 0.5rem;
   width: 100%;
   border: none;
@@ -34,8 +37,66 @@ header h2 {
 }
 .search-form button {
   border: none;
+  text-transform: uppercase;
   padding: 0.5rem;
   font-size: 1rem;
   background-color: rgb(74, 68, 131);
   color: white;
+  cursor: pointer;
+}
+.search-form button:hover {
+  border-radius: 1rem;
+  transition: 0.2s ease-in;
+}
+
+/* gallery section */
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(59, 51, 51);
+  padding: 0.5rem 0rem;
+}
+.gallery-info a {
+  color: gray;
+  text-decoration: none;
+}
+.gallery-info a:hover {
+  font-weight: 700;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 2rem 0rem;
+  width: 80%;
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* nav */
+.nav-btn {
+  min-width: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* more btn */
+.more {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background: rgb(74, 68, 131);
+  color: white;
+  border: none;
+  margin: 1rem;
+  border-radius: 2rem;
+}
+.more:hover {
+  font-weight: 700;
+  transition: ease-in 0.2s;
 }
