@@ -104,12 +104,6 @@ header h2 {
 }
 
 @media (max-width: 768px) {
-  .gallery-img img {
-    max-width: 80vw;
-  }
-  .gallery-info {
-    max-width: 80vw;
-  }
   .more {
     margin: 2rem;
   }
