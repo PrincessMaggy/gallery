@@ -108,4 +108,7 @@ header h2 {
   .gallery-img img {
     max-width: 80vw;
   }
+  .gallery-info {
+    justify-content: space-around;
+  }
 }
