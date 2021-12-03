@@ -5,7 +5,8 @@
 }
 body {
   font-family: "Roboto Slab", serif;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* header */
@@ -69,10 +70,10 @@ header h2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   padding: 2rem 0rem 2rem 0rem;
-  width: 80%;
+  width: 80vw;
   margin: auto;
   row-gap: 5rem;
-  column-gap: 3rem;
+  column-gap: 2rem;
 }
 .gallery-img img {
   width: 100%;
