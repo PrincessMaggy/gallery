@@ -17,6 +17,7 @@ form.addEventListener('submit', e =>{
     searchPhotos(searchValue)
 })
 
+more.addEventListener('click', loadMore);
 
 
 
@@ -75,6 +76,17 @@ function clear(){
 }
 
 
+async function loadMore(){
+    page++;
+    if(currentSearch){
+        fetchLink =`https://api.pexels.com/v1/search?query=${query}+query&per_page=15&p`;
+    }
+    else{
+        fetchLink =`https://api.pexels.com/v1/curated?per_page=15&page=${page}`;
+    }
+    const data = await fetchApi(fetchLink);
+    generatePhotos(data);
+}
 
 
 curatedPhotos();
