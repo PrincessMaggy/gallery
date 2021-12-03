@@ -101,9 +101,11 @@ header h2 {
   transition: ease-in 0.2s;
 }
 
-@media screen and(max-width:768px) {
+@media (max-width: 768px) {
+  .gallery {
+    padding: 1rem 0rem;
+  }
   .gallery-img img {
-    width: 80vw;
-    height: 100%;
+    max-width: 80vw;
   }
 }
