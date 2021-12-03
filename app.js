@@ -10,12 +10,19 @@ let fetchLink;
 let currentSearch;
 
 // event listener
-
+searchInput.addEventListener('input', updateInput);
 form.addEventListener('submit', e =>{
     e.preventDefault();
     currentSearch = searchValue;
     searchPhotos(searchValue)
 })
+
+
+
+
+function updateInput(e){
+    searchValue = e.target.value;
+}
 
 
 async function fetchApi(url){
@@ -53,3 +60,21 @@ async function curatedPhotos(){
 }
 
 
+
+async function searchPhotos(query){
+    clear();
+    fetchLink = `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&p`;
+    const data= await fetchApi(fetchLink);
+    generatePhotos(data);
+}
+
+
+function clear(){
+    gallery.innerHTML ="";
+    searchInput.value = "";
+}
+
+
+
+
+curatedPhotos();
