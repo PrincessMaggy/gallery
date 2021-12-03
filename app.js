@@ -20,12 +20,12 @@ form.addEventListener('submit', e =>{
 more.addEventListener('click', loadMore);
 
 
-
+// updates input value
 function updateInput(e){
     searchValue = e.target.value;
 }
 
-
+// fetches images from the api url
 async function fetchApi(url){
     const dataFetch = await fetch (url,{
         method: 'GET',
@@ -38,6 +38,7 @@ async function fetchApi(url){
     return data;
 }
 
+// generates container for the image fetched
 function generatePhotos(data){
     data.photos.forEach(photo =>{
         const galleryImg = document.createElement('div');
@@ -53,6 +54,7 @@ function generatePhotos(data){
 
 }
 
+// assigns url to fetch image from
 async function curatedPhotos(){
     fetchLink = "https://api.pexels.com/v1/curated?per_page=15";
     const data= await fetchApi(fetchLink);
@@ -61,7 +63,7 @@ async function curatedPhotos(){
 }
 
 
-
+// assigns url for search value
 async function searchPhotos(query){
     clear();
     fetchLink = `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&p`;
@@ -70,12 +72,13 @@ async function searchPhotos(query){
 }
 
 
+// clears input value 
 function clear(){
     gallery.innerHTML ="";
     searchInput.value = "";
 }
 
-
+// adds functionality to the load more button
 async function loadMore(){
     page++;
     if(currentSearch){
